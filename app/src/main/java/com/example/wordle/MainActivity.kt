@@ -70,6 +70,8 @@ class MainActivity : AppCompatActivity() {
                 word1.visibility = View.VISIBLE
                 word1ch.text = word1.toString()
                 word1ch.text = checkGuess(strValue)
+                word1ch.visibility = View.VISIBLE
+
                 simpleEditText.text.clear()
 
             }
@@ -78,6 +80,7 @@ class MainActivity : AppCompatActivity() {
                 word2.visibility = View.VISIBLE
                 word2ch.text = word2.toString()
                 word2ch.text = checkGuess(strValue)
+                word2ch.visibility = View.VISIBLE
                 simpleEditText.text.clear()
 
             }
@@ -86,13 +89,15 @@ class MainActivity : AppCompatActivity() {
                 word3.visibility = View.VISIBLE
                 word3ch.text = word3.toString()
                 word3ch.text = checkGuess(strValue)
+                word3ch.visibility = View.VISIBLE
                 simpleEditText.text.clear()
 
 
             }
             if (counter > 3){
 
-                Toast.makeText(this, "No more tries!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "No more tries!", Toast.LENGTH_LONG).show()
+                TheWord.text = wordToGuess
                 TheWord.visibility = View.VISIBLE
 
 
